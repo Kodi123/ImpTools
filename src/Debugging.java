@@ -1,0 +1,35 @@
+import java.util.List;
+
+public class Debugging {
+	
+	public Debugging( ){
+		DebugPrint("Debugging enabled.");
+	}
+	
+	public static void DebugPrint( String Message ) {
+		System.out.println("Debug: " + Message );
+	}
+	
+	public static void DebugTable( List<String> messages, String Iterator ) {
+		String CheckIterator = ParseIterator(Iterator);
+		for( int i = 0; i < messages.size(); i++ ) {
+			if( CheckIterator == "Numbers" ) {
+				DebugPrint(i + " - " + messages.get(i) );
+			} else {
+				DebugPrint( CheckIterator + " - " + messages.get(i) );
+			}
+		}
+	}
+	
+	private static String ParseIterator( String Iterator ) {
+		switch( Iterator ) {
+		case("+"):
+			return "+";
+		case("#"):
+			return "Numbers";
+		default:
+			return Iterator;
+		
+		}
+	}
+}
