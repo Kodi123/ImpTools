@@ -1,4 +1,5 @@
-import java.util.List;
+package Util;
+import java.util.ArrayList;
 
 public class Debugging {
 	
@@ -10,7 +11,7 @@ public class Debugging {
 		System.out.println("Debug: " + Message );
 	}
 	
-	public static void DebugTable( List<String> messages, String Iterator ) {
+	public static void DebugTable( ArrayList<String> messages, String Iterator ) {
 		String CheckIterator = ParseIterator(Iterator);
 		for( int i = 0; i < messages.size(); i++ ) {
 			if( CheckIterator == "Numbers" ) {
