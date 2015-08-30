@@ -5,7 +5,9 @@ public class Main {
 		Console Console = new Console();
 
 		Console.setVisible(true);
-		Console.DebugPrint("Hello World!");
-
+		Console.DebugPrint("Logging Started!");
+		while(true) {
+			System.out.println(Console.getHeight());
+		}
 	}
 }
